@@ -1,0 +1,36 @@
+
+1. Title: ML94/COLT94 Badge Problem
+
+2. Source Information
+   -- Creator: Haym Hirsh, after an idea by Rob Schapire
+   -- Donor: Haym Hirsh (hirsh@cs.rutgers.edu)
+   -- Date: September, 1994
+ 
+3. Past Usage:
+    Every pre-registered attendee at the 1994 Machine Learning
+    Conference and 1994 Computational Learning Theory Conference received
+    a badge labeled with a "+" or "-".  The labeling was due to some
+    function known only to the badge generator (Haym Hirsh), and it
+    depended only on the attendee's name.  The goal for conference
+    attendees was to identify the unknown function used to generate the
+    +/- labeling.
+
+4. Relevant Information:
+    Part of the problem in using an automated program to discover the
+    unknown target function is to decide how to encode names such that
+    the program can be used.  The data below are presented in the form
+    of a +/- label followed by the person's name.  It is up to the
+    learning-system user to decide how to convert this data into something
+    usable by the system (e.g., what attributes to use if your favorite
+    learner requires feature-vector data).
+
+5. Number of Instances: 294
+
+6. Number of Attributes: N/A
+
+7. Attribute Information: N/A
+
+8. Missing Attribute Values: N/A
+
+9. Class Distribution: 210 positives, 84 negatives
+
