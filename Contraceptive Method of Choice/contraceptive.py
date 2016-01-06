@@ -31,6 +31,8 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.manifold import TSNE
 from sklearn import metrics
 from sklearn import cross_validation
+from sklearn.preprocessing import OneHotEncoder
+import matplotlib.pyplot as plt 
 
 filename = "Contraceptive Method of Choice/cmc.data" # Replace this with your own filename 
 
@@ -42,7 +44,7 @@ column_names = ["Wife's age","Wife's education","Husband's education","Number of
 contraFrame.columns = column_names
 contraFrame = contraFrame.iloc[np.random.permutation(len(contraFrame))]
 target_label = contraFrame["Contraceptive Method Used"]
-del contraFrame["Contraceptive Method Used"]
+del contraFrame["Contraceptive Method Used"] 
 
 train_data,test_data,train_labels,test_labels = cross_validation.train_test_split(contraFrame.values,target_label.values,test_size=0.1)
 
@@ -71,4 +73,11 @@ for classifier,classifier_name in zip(classifiers,classifier_names):
     print "Accuracy for ",classifier_name," : ",metrics.accuracy_score(test_labels,predicted_labels)
     print "Confusion Matrix for ",classifier_name," : \n",metrics.confusion_matrix(test_labels,predicted_labels)
     print "Cross Validation Score for ",classifier_name," : \n",cross_validation.cross_val_score(classifier,contraFrame.values,target_label.values,cv=5)
-    print "----------------------------\n"
+    print "----------------------------\n" 
+    
+#Using t-SNE for visualization of the dataset 
+    
+tsne = TSNE()
+tsne_data = tsne.fit_transform(contraFrame.values)
+plt.scatter(tsne_data[:,0],tsne_data[:,1],c=target_label.values,cmap=plt.cm.rainbow)
+plt.show()
