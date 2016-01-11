@@ -77,7 +77,7 @@ def plotTSNEDecisionBoundaries():
     tsne_data = tsne.fit_transform(feature_set)
     x_min,x_max = tsne_data[:,0].min()-1, tsne_data[:,0].max() + 1
     y_min,y_max = tsne_data[:,1].min()-1, tsne_data[:,1].max() + 1
-    step_size = 0.2
+    step_size = 2.0
     
     xx,yy = np.meshgrid(np.arange(x_min,x_max,step_size),np.arange(y_min,y_max,step_size))
     
