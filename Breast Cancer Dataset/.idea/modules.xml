@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Breast Cancer Dataset.iml" filepath="$PROJECT_DIR$/.idea/Breast Cancer Dataset.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Dermatology Dataset/.idea/Dermatology Dataset.iml" filepath="$PROJECT_DIR$/../Dermatology Dataset/.idea/Dermatology Dataset.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Student Dataset/.idea/Student Dataset.iml" filepath="$PROJECT_DIR$/../Student Dataset/.idea/Student Dataset.iml" />
+    </modules>
+  </component>
+</project>
